@@ -1,1 +1,1 @@
-# angular-slim-crud
+# angular-slim-codeigniter-crud
