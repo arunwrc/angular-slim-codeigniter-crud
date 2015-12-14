@@ -16,7 +16,7 @@ app.config(['$routeProvider', function($routeProvider) {
 app.controller ('CustomerListControler',[
   '$scope','$http',
   function ($scope, $http) {
-      $http.get('api/Customers').success(function(data) {
+      $http.get('Customers').success(function(data) {
         $scope.customers = data;  
       });
   }    

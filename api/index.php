@@ -7,7 +7,7 @@ require 'Slim/Slim.php';
 
 $app = new Slim();
 
-$app->get('/Customers', 'getCustomers');
+//$app->get('/Customers', 'getCustomers');
 $app->get('/Customers/:id', 'getCustomer');
 $app->post('/New_Customer', 'addCustomer');
 $app->put('/Customers/:id', 'updateCustomer');
