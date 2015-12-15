@@ -1,8 +1,4 @@
 <?php
-/*
-	Author - Anjana Wijesundara
-	Contact - wsanjana951@gmail.com
-*/
 require 'Slim/Slim.php';
 
 $app = new Slim();

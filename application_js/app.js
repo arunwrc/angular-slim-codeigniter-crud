@@ -1,9 +1,4 @@
-/*
-    Author  - Anjana Wijesundara
-    Contact - wsanjana951@gmail.com
-*/
-
-var app = angular.module('Application', ['ngRoute']);
+var app = angular.module('Application',['ngRoute', 'angularUtils.directives.dirPagination']);
 
 app.config(['$routeProvider', function($routeProvider) {
   $routeProvider.
@@ -17,9 +12,11 @@ app.controller ('CustomerListControler',[
   '$scope','$http',
   function ($scope, $http) {
       $http.get('Customers').success(function(data) {
-        $scope.customers = data;  
+        $scope.customers = data;
       });
-  }    
+
+  }
+
 ]),
 
 app.controller ('CustomerAddControler',[
