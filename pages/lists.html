@@ -5,6 +5,12 @@
 <h2>Customers</h2>
 
 <div ng-controller="CustomerListControler">
+    <form class="form-inline">
+        <div class="form-group">
+            <label >Search</label>
+            <input type="text" ng-model="search" class="form-control" placeholder="Search">
+        </div>
+    </form>
 <table class="table table-condensed">
   <thead>
     <tr>
@@ -17,7 +23,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="res in customers | orderBy: 'First_Name'">
+    <tr ng-repeat="res in customers | filter:search | orderBy: 'First_Name'">
       <td>{{res.Username}}</td>
       <td>{{res.First_Name}}</td>
       <td>{{res.Last_Name}}</td>
